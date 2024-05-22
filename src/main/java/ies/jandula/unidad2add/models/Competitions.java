@@ -2,58 +2,69 @@ package ies.jandula.unidad2add.models;
 
 import java.util.Date;
 
-
-public class Competitions
+public class Competitions 
 {
-	private Integer competitionId;
-	
-	private Integer seasonId;
-	
-	private String competitionName;
-	
-	private String competitionGender;
-	
-	private String countryName;
-	
-	private String seasonName;
-	
-	private Date matchUpdated;
-	
-	private Date matchAvailable;
+    private String competitionId;
+    private String seasonId;
+    private String countryName;
+    private String competitionName;
+    private String competitionGender;
+    private String competitionYouth;
+    private String competitionInternational;
+    private String seasonName;
+    private String matchUpdated;
+    private String matchAvailable;
+    private String matchUpdated360;
+    private String matchAvailable360;
 
-	public Competitions()
-	{
-		super();
-	}
+    /**
+     * Default constructor.
+     */
+    public Competitions() 
+    {
+        super();
+    }
 
-	public Competitions(Integer competitionId, Integer seasonId, String competitionName, String competitionGender,
-			String countryName, String seasonName, Date matchUpdated, Date matchAvailable) 
-	{
+	public Competitions(String string, String seasonId2, String countryName, String competitionName,
+			String competitionGender, String competitionYouth, String competitionInternational, String seasonName,
+			String matchUpdated, String matchAvailable, String matchUpdated360, String matchAvailable360) {
 		super();
-		this.competitionId = competitionId;
-		this.seasonId = seasonId;
+		this.competitionId = string;
+		this.seasonId = seasonId2;
+		this.countryName = countryName;
 		this.competitionName = competitionName;
 		this.competitionGender = competitionGender;
-		this.countryName = countryName;
+		this.competitionYouth = competitionYouth;
+		this.competitionInternational = competitionInternational;
 		this.seasonName = seasonName;
 		this.matchUpdated = matchUpdated;
 		this.matchAvailable = matchAvailable;
+		this.matchUpdated360 = matchUpdated360;
+		this.matchAvailable360 = matchAvailable360;
 	}
 
-	public Integer getCompetitionId() {
+	public String getCompetitionId() {
 		return competitionId;
 	}
 
-	public void setCompetitionId(Integer competitionId) {
+	public void setCompetitionId(String competitionId) {
 		this.competitionId = competitionId;
 	}
 
-	public Integer getSeasonId() {
+	public String getSeasonId() {
 		return seasonId;
 	}
 
-	public void setSeasonId(Integer seasonId) {
+	public void setSeasonId(String seasonId) {
 		this.seasonId = seasonId;
+	}
+
+	public String getCountryName() {
+		return countryName;
+	}
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
 	}
 
 	public String getCompetitionName() {
@@ -72,12 +83,20 @@ public class Competitions
 		this.competitionGender = competitionGender;
 	}
 
-	public String getCountryName() {
-		return countryName;
+	public String getCompetitionYouth() {
+		return competitionYouth;
 	}
 
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
+	public void setCompetitionYouth(String competitionYouth) {
+		this.competitionYouth = competitionYouth;
+	}
+
+	public String getCompetitionInternational() {
+		return competitionInternational;
+	}
+
+	public void setCompetitionInternational(String competitionInternational) {
+		this.competitionInternational = competitionInternational;
 	}
 
 	public String getSeasonName() {
@@ -88,43 +107,47 @@ public class Competitions
 		this.seasonName = seasonName;
 	}
 
-	public Date getMatchUpdated() {
+	public String getMatchUpdated() {
 		return matchUpdated;
 	}
 
-	public void setMatchUpdated(Date matchUpdated) {
+	public void setMatchUpdated(String matchUpdated) {
 		this.matchUpdated = matchUpdated;
 	}
 
-	public Date getMatchAvailable() {
+	public String getMatchAvailable() {
 		return matchAvailable;
 	}
 
-	public void setMatchAvailable(Date matchAvailable) {
+	public void setMatchAvailable(String matchAvailable) {
 		this.matchAvailable = matchAvailable;
 	}
 
-	@Override
-	public String toString() 
-	{
-		StringBuilder builder = new StringBuilder();
-		builder.append("Competitions [competitionId= ");
-		builder.append(competitionId);
-		builder.append(", seasonId= ");
-		builder.append(seasonId);
-		builder.append(", competitionName= ");
-		builder.append(competitionName);
-		builder.append(", competitionGender= ");
-		builder.append(competitionGender);
-		builder.append(", countryName= ");
-		builder.append(countryName);
-		builder.append(", seasonName= ");
-		builder.append(seasonName);
-		builder.append(", matchUpdated= ");
-		builder.append(matchUpdated);
-		builder.append(", matchAvailable= ");
-		builder.append(matchAvailable);
-		builder.append("]");
-		return builder.toString();
+	public String getMatchUpdated360() {
+		return matchUpdated360;
 	}
+
+	public void setMatchUpdated360(String matchUpdated360) {
+		this.matchUpdated360 = matchUpdated360;
+	}
+
+	public String getMatchAvailable360() {
+		return matchAvailable360;
+	}
+
+	public void setMatchAvailable360(String matchAvailable360) {
+		this.matchAvailable360 = matchAvailable360;
+	}
+
+	@Override
+	public String toString() {
+		return "Competitions [competitionId=" + competitionId + ", seasonId=" + seasonId + ", countryName="
+				+ countryName + ", competitionName=" + competitionName + ", competitionGender=" + competitionGender
+				+ ", competitionYouth=" + competitionYouth + ", competitionInternational=" + competitionInternational
+				+ ", seasonName=" + seasonName + ", matchUpdated=" + matchUpdated + ", matchAvailable=" + matchAvailable
+				+ ", matchUpdated360=" + matchUpdated360 + ", matchAvailable360=" + matchAvailable360 + "]";
+	}
+
+	
+    
 }
